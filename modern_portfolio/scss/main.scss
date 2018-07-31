@@ -1,9 +1,29 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 
-html {
-  font-size: 10px;
+// Images
+  $show-home-image:true;
+  // NOTE: ../ means go up a directory
+  $home-image: url(../img/background.jpg);
+  $background-opacity:0.9;
+
+@mixin easeOut{
+
+  transition: all 1.5 ease-out;
 }
+
+// Set up background image
+@mixin background {
+  @if $show-home-image{
+    &#bg-img {
+      background: $home-image;
+    }
+  }
+}
+
+// html {
+//   font-size: 10px;
+// }
 
 // Use asterisk to Select everyting in CSS
 // Note: border-box will keep the box the same size no matter the width you give the border
@@ -12,6 +32,7 @@ html {
 }
 
 body {  
+  @include background;
   background: $primary-color;
   color: #fff;
   height: 100%;
@@ -67,9 +88,18 @@ main {
       &:hover {
         color: $secondary-color;
         // Fade color in and out from the Icon
-        transition: all 1.5 ease-out;
+        @include easeOut();
       }
 
+    }
+  }
+
+  &#home {
+    // Prevent scroll bars from being on the home page
+    overflow: hidden;
+
+    h1 {
+      margin-top: 20vh;
     }
   }
 }
