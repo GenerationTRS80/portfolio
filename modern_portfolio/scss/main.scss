@@ -1,45 +1,5 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+@import 'config';
 
-// Images
-  $show-home-image:true;
-  // NOTE: ../ means go up a directory
-  $home-image: url(../img/background.jpg);
-  $background-opacity:0.5;
-
-@mixin easeOut{
-
-  transition: all 1.5 ease-out;
-}
-
-// Set up background image
-@mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: cover;
-
-      &#bg-img:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: rgba($primary-color, $background-opacity);
-      }
-    }
-  }
-}
-
-// html {
-//   font-size: 10px;
-// }
-
-// Use asterisk to Select everyting in CSS
-// Note: border-box will keep the box the same size no matter the width you give the border
 * {
   box-sizing: border-box;
 }
