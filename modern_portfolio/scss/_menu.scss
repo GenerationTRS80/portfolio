@@ -15,4 +15,31 @@
     background: #ffff;
     @include easeOut;
   }
+
+  &.close {
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+    transform: rotate(180deg);
+    transition-duration: .3s
+
+    .btn-line {
+      // Line 1 - Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px,5px);
+        transition-duration: .3s
+      }
+
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+        transition-duration: .3s
+      }
+
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px,-6px);
+        transition-duration: .3s
+      }
+
+    }
+  }
 }
