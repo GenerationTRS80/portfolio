@@ -36,7 +36,11 @@ $secondary-color: #eece1a;
 }
 
 // Media Query Mixin
+// NOTE: @content allows the mixin to be updated with content when used in another file.
 @mixin mediaSm {
+
+  // NOTE: max-width is the maximum width of the screen that this styling is to have effect
+  // That means anything less the width of 500px will take effect
   @media screen and (max-width: 500px) {
     @content;
   }
