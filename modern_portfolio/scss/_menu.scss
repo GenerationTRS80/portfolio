@@ -103,12 +103,14 @@
       width: 250px;
       height: 250px;
       background: url('../img/portrait.jpg');
+      // Makes the portrait into a circle
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
   }
 
   .nav-item {
+    // transform left > right
     transform: translate3d(600px,0,0);
     @include easeOut;
 
@@ -123,6 +125,7 @@
 
   }
 
+  // Format Nav-link
   .nav-link {
     display: inline-block;
     position: relative;
@@ -131,6 +134,7 @@
     padding: 1rem 0;
     font-weight: 300;
     color: #fff;
+    // Remove underline for link
     text-decoration: none;
     @include easeOut;
 
