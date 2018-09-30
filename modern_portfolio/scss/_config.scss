@@ -1,9 +1,8 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 
-// Images
+// Images NOTE: ../ means go up a directory
   $show-home-image:true;
-  // NOTE: ../ means go up a directory
   $home-image: url(../img/background.jpg);
   $background-opacity:0.75;
 
@@ -21,7 +20,7 @@ $secondary-color: #eece1a;
       background-size: cover;
 
       &:after {
-        // Need to insert a content field with using after or before
+        // Need to insert a content variable with using BEFORE or AFTER
         content: '';
         position: absolute;
         top: 0;
