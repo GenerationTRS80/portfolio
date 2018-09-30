@@ -1,7 +1,7 @@
 // Menu Button
 .menu-btn{
   position: absolute;
-  // put to the front of the page
+  // put to the front of the page by setting z-index: 3
   z-index: 3;
   right: 35px;
   top: 35px;
