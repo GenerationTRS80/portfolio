@@ -15,7 +15,7 @@
   // To create the node list array use querySelectorAll function
   const navItems = document.querySelectorAll('.nav-item');
 
-  // Set intial state of menu
+  // Set intial state of menu NOTE: you need to use "let" because you will directly reasign the variable
   let showMenu = false;
 
   menuBtn.addEventListener('click',toggleMenu);

@@ -52,12 +52,16 @@
   opacity: 0.9;
   visibility: hidden;
 
+  // The "show" class here is the same "show" class referenced in the java script
   &.show {
     visibility: visible;
   }
 
+  // Dash &-branding and &-nav represent menu-branding and menu-nam
+  // The comma , seprator means that both -branding and -nav will have the same styling
   &-branding,
   &-nav {
+    // https://www.w3schools.com/css/css3_flexbox.asp
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -94,7 +98,7 @@
     @include easeOut;
 
     &.show {
-      // Slide in from top
+      // Slide in from bottom
       transform: translate3d(0,0,0);
       transition-duration: .8s;
     }
@@ -125,7 +129,7 @@
 
   }
 
-  // Format Nav-link
+  // Format Navigation Links
   .nav-link {
     display: inline-block;
     position: relative;
@@ -145,6 +149,7 @@
 
 }
 
+// SASS for loop
 // Delay each nav item slide by 0.1s
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
