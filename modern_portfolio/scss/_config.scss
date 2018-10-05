@@ -34,6 +34,16 @@ $secondary-color: #eece1a;
   }
 }
 
+// Set text color
+@function set-text-color ($color) {
+  @if(lightness($color)>40) {
+    @return #000;
+  } @else  {
+    @return #fff;
+  }
+}
+
+
 // Media Query Mixin
 // NOTE: @content allows the mixin to be updated with content when used in another file.
 @mixin mediaSm {

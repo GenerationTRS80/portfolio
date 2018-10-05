@@ -1,12 +1,12 @@
-// Widescreens
-@include mediaXL {
+// // Widescreens
+// @include mediaXL {
 
-}
+// }
 
-// Desktops & Laptops
-@include mediaLg {
+// // Desktops & Laptops
+// @include mediaLg {
   
-}
+// }
 
 // Tablets & Small Laptops
 @include mediaMd {
@@ -32,6 +32,7 @@
     min-height: 0;
 
     &.show {
+      // Come in from the top and bottom
       transform: translate3d(0,0,0);
     }
   }
