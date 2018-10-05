@@ -41,7 +41,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #ffff;
+    background: #fff;
     transition: all 1.5 ease-out; }
   .menu-btn.close {
     transform: rotate(180deg);
