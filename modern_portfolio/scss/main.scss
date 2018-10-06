@@ -1,5 +1,5 @@
 @import 'config';
-@import 'mobile';
+
 @import 'menu';
 @import 'heading';
 
@@ -128,3 +128,5 @@ main {
   width: 100%;
 }
 
+// Make media queries run after the initial css has run by moving mobile to bottom
+@import 'mobile';
