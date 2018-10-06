@@ -30,12 +30,27 @@ header {
 }
 
 .text-secondary {
+  font-size: 5rem;
   color: $secondary-color;
 }
+
+span {
+  .text-secondary {
+    font-size: 5rem;
+    color: $secondary-color;
+  }
+}
+
+h3 {
+ font-size: 1.5rem;
+}
+
 
 main {
   padding: 4rem;
   height: 100%;
+  // Create a sticky footer (comment out height)
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -61,3 +76,55 @@ main {
     }
   }
 }
+
+.about-info {
+  display: grid;
+  // grid-template-arae is a visual representation of what you want to display
+  grid-gap: 30px;
+  grid-template-areas: 
+  'bioimage bio bio'
+  'job1 job2 job3';
+  grid-template-columns: repeat(3,fr1);
+
+  .bio-image {
+    // Reference bioimage in grid-template-area of the about-info class above
+    grid-area: bioimage;
+    margin: auto;
+    padding: 10;
+    border-radius: 50%;
+    border: $secondary-color 4px solid;
+  }
+  
+  .bio {
+    grid-area: bio;
+    font-size: 1.4rem;
+  }
+  
+  .job-1 {
+    grid-area: job1;
+  }
+  
+  .job-2 {
+    grid-area: job2;
+  }
+  
+  .job-3 {
+    grid-area: job3;
+  }
+  
+  .job {
+    padding: 0.5rem;
+    background: lighten($primary-color,5);
+    border-bottom:$secondary-color 3px solid;
+  }
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: darken($primary-color,10);
+  color: set-text-color($primary-color);
+  height: 60px;
+  width: 100%;
+}
+
