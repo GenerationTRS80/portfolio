@@ -156,8 +156,12 @@ header {
   font-size: 5rem;
   color: #eece1a; }
 
-span .text-secondary {
-  font-size: 5rem;
+.text-secondary-md {
+  font-size: 3.4rem;
+  color: #eece1a; }
+
+.text-secondary-sm {
+  font-size: 1.4rem;
   color: #eece1a; }
 
 h3 {
@@ -216,6 +220,26 @@ main {
       border-color: #eece1a;
       transition: all 1.5 ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    transition: all 1.5 ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5;
+      background-color: #eece1a;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -269,14 +293,14 @@ main {
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
   .menu-branding {
-    height: 25vh;
+    height: 30vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
       background-image: url("../img/Phil_2002__compress.jpg");
       background-repeat: no-repeat;
       background-position: center;
-      width: 150px;
-      height: 150px; }
+      width: 220px;
+      height: 220px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
