@@ -216,6 +216,23 @@ main {
       border-color: #eece1a;
       transition: all 1.5 ease-out; }
 
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background-color: #eece1a;
+    color: #000; }
+
+.btn-dark {
+  background-color: black;
+  color: #fff; }
+
+.btn-light {
+  background-color: #c4c4c4;
+  color: #000; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
